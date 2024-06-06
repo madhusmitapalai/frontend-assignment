@@ -43,25 +43,13 @@ const initialAccordions = [
     ],
     editable: false,
   },
-  {
-    id: 4,
-    questions: [
-      { id: 1, text: "Do you like music?", answer: "No" },
-      { id: 2, text: "What is your favorite season?", answer: "No" },
-      { id: 3, text: "Do you like hiking?", answer: "No" },
-      { id: 4, text: "What is your dream job?", answer: "No" },
-      { id: 5, text: "Do you like painting?", answer: "No" },
-      { id: 6, text: "Do you follow any sports?", answer: "No" },
-    ],
-    editable: false,
-  },
 ];
 
 function App() {
   const [accordions, setAccordions] = useState(initialAccordions);
 
   const handleAnswerChange = (accordionId, questionId, newAnswer) => {
-    const updatedAccordions = accordions.map((accordion) => {
+    const updatedAccordions = accordions?.map((accordion) => {
       if (accordion.id === accordionId) {
         const updatedQuestions = accordion.questions.map((question) => {
           if (question.id === questionId) {
@@ -100,10 +88,13 @@ function App() {
 
   return (
     <div className="appContainer">
-      <Card className="cardContainer" title="Accordion Questionnaire">
+      <Card className="cardContainer" title="Questions Set">
         <Collapse accordion>
-          {accordions.map((accordion) => (
-            <Panel header={`Accordion ${accordion.id}`} key={accordion.id}>
+          {accordions?.map((accordion) => (
+            <Panel
+              header={` Question Set-  ${accordion.id}`}
+              key={accordion.id}
+            >
               <Accordion
                 accordion={accordion}
                 onAnswerChange={handleAnswerChange}

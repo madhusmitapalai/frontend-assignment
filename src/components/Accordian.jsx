@@ -34,11 +34,20 @@ const Accordion = ({ accordion, onAnswerChange, onSave }) => {
           <Button
             type="primary"
             onClick={handleSave}
-            style={{ marginRight: "10px" }}
+            style={{
+              marginRight: "10px",
+              background: "#172b4d",
+              color: "white",
+            }}
           >
             Save
           </Button>
-          <Button onClick={handleCancel}>Cancel</Button>
+          <Button
+            onClick={handleCancel}
+            style={{ background: "red", color: "white" }}
+          >
+            Cancel
+          </Button>
         </div>
       )}
     </div>
