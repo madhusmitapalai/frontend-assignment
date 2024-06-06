@@ -1,0 +1,15 @@
+.questionContainer {
+    margin-bottom: 10px;
+}
+
+.questionText {
+    margin: 5px 0;
+}
+
+.radioLabel {
+    margin-right: 10px;
+}
+
+.radioInput {
+    margin-right: 3px;
+}
