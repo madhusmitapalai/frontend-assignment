@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Collapse, Card } from "antd";
-
-import "./App.css"; // Import the custom CSS
+import { Collapse, Card, notification } from "antd";
+import { DislikeOutlined, CheckCircleFilled } from "@ant-design/icons";
+import "./App.css";
 import Accordion from "./components/Accordian";
 
 const { Panel } = Collapse;
@@ -92,7 +92,18 @@ function App() {
       }
       return accordion;
     });
-
+    notification.success({
+      message: ` Your answer is Sucessfully saved `,
+      icon: (
+        <CheckCircleFilled
+          style={{
+            color: "green",
+          }}
+        />
+      ),
+      duration: 3,
+      placement: "bottomRight",
+    });
     setAccordions(updatedAccordions);
   };
 
