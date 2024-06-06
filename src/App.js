@@ -10,24 +10,34 @@ const initialAccordions = [
   {
     id: 1,
     questions: [
-      { id: 1, text: "What is your name?", answer: "No" },
-      { id: 2, text: "What is your age?", answer: "No" },
-      { id: 3, text: "Do you have any pets?", answer: "No" },
-      { id: 4, text: "What is your favorite color?", answer: "No" },
-      { id: 5, text: "Do you like to travel?", answer: "No" },
-      { id: 6, text: "Do you play any sports?", answer: "No" },
+      {
+        id: 1,
+        text: "All objections regarding price,quality, delivary etc . successfully tackled and customer is in favour of our machine.",
+        answer: "No",
+      },
+      { id: 2, text: "Negotiation is in progress", answer: "No" },
+      {
+        id: 3,
+        text: "All points satisfied from 1 to 8 and customer likely to finalize within the next 1months time . ",
+        answer: "No",
+      },
     ],
     editable: true,
   },
   {
     id: 2,
     questions: [
-      { id: 1, text: "What is your job?", answer: "No" },
-      { id: 2, text: "Where do you live?", answer: "No" },
-      { id: 3, text: "Do you have a car?", answer: "No" },
-      { id: 4, text: "What is your hobby?", answer: "No" },
-      { id: 5, text: "Do you like reading?", answer: "No" },
-      { id: 6, text: "Do you watch movies?", answer: "No" },
+      {
+        id: 1,
+        text: "Customer confirms order with approved blister drawing",
+        answer: "No",
+      },
+      { id: 2, text: "Advance is given", answer: "No" },
+      {
+        id: 3,
+        text: "Final  layout ready as per drawing and is ready at customer site",
+        answer: "No",
+      },
     ],
     editable: false,
   },
@@ -88,6 +98,7 @@ function App() {
 
   return (
     <div className="appContainer">
+      <h1 className="header">Dummy Accordian</h1>
       <Card className="cardContainer" title="Questions Set">
         <Collapse accordion>
           {accordions?.map((accordion) => (
